@@ -42,3 +42,7 @@ You should get `docker-compose version: 1.10.0` or higher
 Thats is do to port 443 on your domain and itll be your nginx  
 To explain what we did we created a network for all the containers to communicate over then using docker compose the containers where created with the specifications we set in the docker-compose.yml  
 We can manage these containers like any other containers with `docker stop` and `docker restart` or use docker-compose, such as the command `docker-compose logs`
+
+We Created a landing page which servers html from `/var/www/main` on the host machine  
+A Plex server is now running bound to port 32400 on the host machine serving media from `/var/tv` and `/var/movies`  
+A next cloud server that acts as your private dropbox

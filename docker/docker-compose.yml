@@ -72,6 +72,38 @@ services:
       - '/var/movies:/movies'
       - '/var/downloads:/downloads'
       - '/var/transcode:/transcode'
+  nextcloud:
+    image: wonderfall/nextcloud
+    restart: 'always'
+    container_name: nextcloud
+    hostname: next.mycoolsite.com
+    environment:
+      - VIRTUAL_HOST=next.mycoolsite.com
+      - VIRTUAL_PORT=8888
+      - VIRTUAL_NETWORK=nginx-proxy
+      - LETSENCRYPT_HOST=next.mycoolsite.com
+      - LETSENCRYPT_EMAIL=username@redbrick.dcu.ie
+      - UID=1000
+      - GID=1000
+      - UPLOAD_MAX_SIZE=10G
+      - APC_SHM_SIZE=128M
+      - OPCACHE_MEM_SIZE=128
+      - REDIS_MAX_MEMORY=64mb
+      - CRON_PERIOD=15m
+      - TZ=Europe/Dublin
+      - ADMIN_USER=root
+      - ADMIN_PASSWORD=CHNAGEME
+      - DB_NAME=nextcloud
+      - DB_USER=nextcloud
+      - DB_PASSWORD=CHNAGEMETOANITHERPW
+      - DB_HOST=nextcloud-db
+    volumes:
+      - /var/nextcloud:/data
+      - ./config:/config
+      - ./apps:/apps2
+
+volumes:
+  nextcloud-db-data:
 
 networks:
   default:
