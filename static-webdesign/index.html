@@ -23,10 +23,34 @@
         <section data-markdown>
           <script type='text/template'>
           ## Why
-          There are many [Problem with cms](http://blog.theinternets.be/the-problem-with-modern-content-management-systems/) some due to security others dues to infrastructure dependency, database or running a server  
+          There are many [problems with cms](http://blog.theinternets.be/the-problem-with-modern-content-management-systems/) some due to security others dues to infrastructure dependency, database or running a server  
           Allows us to separate layout from content.  
-          Produces HTML which is easy to host ans share.  
+          Produces HTML which is easy to host and share.  
           </script>
+        </section>
+        <section>
+          <section data-markdown>
+            <script type='text/template'>
+            ## Dynamic vs static
+            </script>
+          </section>
+          <section data-markdown>
+            <script type='text/template'>
+            ### Static Site
+            A static site is one that does not change once the content is set.  
+            - plain old html site
+            - redbrick
+            </script>
+          </section>
+          <section data-markdown>
+            <script type='text/template'>
+            ### Dynamic Site
+            A dynamic is one that is generated everytime you load it.  
+            - wordpress
+            - facebook
+            - twitter
+            </script>
+          </section>
         </section>
         <section data-markdown>
           <script type='text/template'>
@@ -40,7 +64,7 @@
             <script type='text/template'>
             ## Using Hugo
             Hugo is already installed on pygmalion, so everyone just needs to ssh there to use it
-            ```
+            ``` bash
             ssh username@pygmalion.redbrick.dcu.ie
             ```
             </script>
@@ -49,7 +73,7 @@
             <script type='text/template'>
             ## Creating your first site
             To generate your first site you can type the command:
-            ```
+            ``` bash
             $ hugo new site ~/my-website
             ```
             </script>
@@ -57,7 +81,7 @@
           <section data-markdown>
             <script type='text/template'>
             Jump into your new site and have a look around at the files
-            ```
+            ``` bash
             $ cd ~/my-website
             $ ls -F
             ```
@@ -67,11 +91,11 @@
             <script type='text/template'>
             Open up the `config.yaml` file to change the configuration of your website
 
-            ```
+            ``` bash
             $ nano config.yaml
             ```
             Edit the content/index.md with what ever you want to say
-            ```
+            ``` bash
             $ nano content/index.md
             ```
             </script>
@@ -87,9 +111,9 @@
             <script type='text/template'>
             ### Changing images
             To get started you will want to add your own picutres for your avatar, banner and about photos. To change these you will need to add these to your `/static/img/` folder.
-            * avatar.jpg
-            * banner.jpg
-            * about.jpg
+            - avatar.jpg
+            - banner.jpg
+            - about.jpg
             </script>
           </section>
           <section data-markdown>
@@ -103,12 +127,12 @@
           <section data-markdown>
             <script type='text/template'>
             ### Adding new pages
-            ```
+            ``` bash
             $ hugo new about.md
             ```
             This will generate a new page with some metadata all ready in it
             Take a look at this new file with
-            ```
+            ``` bash
             $ nano content/about.md
             ```
             </script>
@@ -118,7 +142,7 @@
           <script type='text/template'>
           ## Building the Site
           To build your site we type the command
-          ```
+          ``` bash
           $ hugo
           ```
           This will output all the code into the `public` folder.  
@@ -127,10 +151,11 @@
         <section data-markdown>
           <script type='text/template'>
           To publish it to redbrick
-          ```
+          ``` bash
           mv public/* ~/public_html
+          cd ~/public_html
           chmod -R 755 *
-          chmod -r 644 *.html *.css *.html *.jpg
+          chmod -r 644 *.html *.css *.html *.jpg *.png
           ```
           </script>
         </section>
@@ -147,6 +172,7 @@
             scale them down and compress them
             - thumbnails 200px
             - banners 800px
+
             (These are rough estimates every page is different)
             Compression removes details but makes them smaller
             </script>
@@ -176,7 +202,6 @@
             Questions?
           </script>
         </section>
-        
       </div>
     </div>
     <script src="../docker/dist/js/reveal.js"></script>

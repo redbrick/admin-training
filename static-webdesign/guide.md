@@ -2,8 +2,20 @@
 
 ## Why
 There are many [Problem with cms](http://blog.theinternets.be/the-problem-with-modern-content-management-systems/) some due to security others dues to infrastructure dependency, database or running a server
-Allows us to separate layout from content.
-Produces HTML which is easy to host ans share.
+Allows us to separate layout from content.  
+Produces HTML which is easy to host ans share.  
+
+## Dynamic vs static
+### Static Site
+A static site is one that does not change once the content is set.  
+- plain old html site
+- redbrick
+
+### Dynamic Site
+A dynamic is one that is generated everytime you load it.  
+- wordpress
+- facebook
+- twitter
 
 # Hugo
 Written in go, so runs on anything  
@@ -39,9 +51,9 @@ $ nano content/index.md
 ## Making it your own
 ### Changing images
 To get started you will want to add your own picutres for your avatar, banner and about photos. To change these you will need to add these to your `/static/img/` folder.
-* avatar.jpg
-* banner.jpg
-* about.jpg
+- avatar.jpg
+- banner.jpg
+- about.jpg
 
 ### Customising pages
 * Change the baseURL `baseURL: "http://www.redbrick.dcu.ie/~username/"` to inclue your username
@@ -91,6 +103,7 @@ Don't use high-res
 scale them down and compress them
 - thumbnails 200px
 - banners 800px
+
 (These are rough estimates every page is different)
 Compression removes details but makes them smaller
 
