@@ -2,13 +2,13 @@
   <head>
     <meta charset="utf-8">
     <title>Docker: The Cloud in a box</title>
-    <link rel="stylesheet" href="./dist/css/redbrick.css">
+    <link rel="stylesheet" href="../dist/css/redbrick.css">
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? './dist/css/pdf.css' : './dist/css/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../dist/css/pdf.css' : '../dist/css/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
   </head>
@@ -134,19 +134,19 @@
         </section>
       </div>
     </div>
-    <script src="./dist/js/reveal.js"></script>
-    <script src="./dist/js/head.min.js"></script>
+    <script src="../dist/js/reveal.js"></script>
+    <script src="../dist/js/head.min.js"></script>
     <script>
       Reveal.initialize({
         controls: true,
         mouseWheel: true,
         dependencies: [
-          { src: './dist/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: './dist/js/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: './dist/js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: './dist/js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: './dist/js/zoom.js', async: true },
-          { src: './dist/js/notes.js', async: true }
+          { src: '../dist/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../dist/js/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../dist/js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../dist/js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../dist/js/zoom.js', async: true },
+          { src: '../dist/js/notes.js', async: true }
         ]
       });
     </script>
